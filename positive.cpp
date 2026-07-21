@@ -16,6 +16,6 @@ int main() {
         cout << a << " is a negative number." << endl;
     } 
     else {
-        cout << "The number is zero." << end1;
+        cout << "The number is zero." << endl;
     } 
 }
