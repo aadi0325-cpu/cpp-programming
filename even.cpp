@@ -9,5 +9,6 @@ int main() {
         cout<< "no is even\n";
     } else {
         cout<< "no is odd\n";
+        cout<< "om";
     }
 }
