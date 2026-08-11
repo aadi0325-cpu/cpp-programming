@@ -19,30 +19,60 @@ public:
         cin >> denominator;
     }
 
+    Fraction add(Fraction f)
+    {
+        Fraction result;
+
+        result.numerator = (numerator * f.denominator) +
+                           (f.numerator * denominator);
+
+        result.denominator = denominator * f.denominator;
+
+        return result;
+    }
+
+    Fraction subtract(Fraction f)
+    {
+        Fraction result;
+
+        result.numerator = (numerator * f.denominator) -
+                           (f.numerator * denominator);
+
+        result.denominator = denominator * f.denominator;
+
+        return result;
+    }
+
     void display()
     {
-        cout << "\nNumerator = " << numerator;
-        cout << "\nDenominator = " << denominator;
-
-        if (denominator != 0)
-        {
-            cout << "\nFraction = " << numerator << "/" << denominator;
-        }
-        else
-        {
-            cout << "\nError: Denominator cannot be zero.";
-        }
+        cout << numerator << "/" << denominator;
     }
 };
 
 int main()
 {
-    Fraction f;
+    Fraction f1, f2, sum, difference;
 
-    cout << "Enter the values of a fraction:" << endl;
+    cout << "Enter First Fraction:" << endl;
+    f1.input();
 
-    f.input();
+    cout << "\nEnter Second Fraction:" << endl;
+    f2.input();
 
-    f.display();
+    sum = f1.add(f2);
+
+    difference = f1.subtract(f2);
+
+    cout << "\nFirst Fraction: ";
+    f1.display();
+
+    cout << "\nSecond Fraction: ";
+    f2.display();
+
+    cout << "\n\nAddition: ";
+    sum.display();
+
+    cout << "\nSubtraction: ";
+    difference.display();
 
 }
