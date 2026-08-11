@@ -6,46 +6,33 @@ using namespace std;
 class Fraction
 {
 private:
-    int numerator;
-    int denominator;
+    int num;
+    int den;
 
 public:
     void input()
     {
         cout << "Enter numerator: ";
-        cin >> numerator;
+        cin >> num;
 
         cout << "Enter denominator: ";
-        cin >> denominator;
+        cin >> den;
     }
 
     Fraction add(Fraction f)
     {
         Fraction result;
 
-        result.numerator = (numerator * f.denominator) +
-                           (f.numerator * denominator);
+        result.num = (num * f.den) + (f.num * den);
 
-        result.denominator = denominator * f.denominator;
-
-        return result;
-    }
-
-    Fraction subtract(Fraction f)
-    {
-        Fraction result;
-
-        result.numerator = (numerator * f.denominator) -
-                           (f.numerator * denominator);
-
-        result.denominator = denominator * f.denominator;
+        result.den = den * f.den;
 
         return result;
     }
 
     void display()
     {
-        cout << numerator << "/" << denominator;
+        cout << num << "/" << den;
     }
 };
 
@@ -61,7 +48,6 @@ int main()
 
     sum = f1.add(f2);
 
-    difference = f1.subtract(f2);
 
     cout << "\nFirst Fraction: ";
     f1.display();
@@ -71,8 +57,5 @@ int main()
 
     cout << "\n\nAddition: ";
     sum.display();
-
-    cout << "\nSubtraction: ";
-    difference.display();
 
 }
