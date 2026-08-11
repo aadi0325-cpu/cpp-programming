@@ -62,7 +62,6 @@ int main()
 
     subtraction = c1.subtract(c2);
 
-    // Display first number
     cout << "\nFirst Complex Number: ";
     c1.display();
 
