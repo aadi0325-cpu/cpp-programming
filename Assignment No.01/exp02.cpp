@@ -7,5 +7,5 @@ int main()
 {
 int a=2,b=4,c;
 c=a+b;
-cout<<"addition of two no:   \n"<<c;
+cout<<"addition of two no :   \n"<<c;
 }
