@@ -29,6 +29,16 @@ public:
         return result;
     }
 
+    Complex subtract(Complex c)
+    {
+        Complex result;
+
+        result.real = real - c.real;
+        result.imag = imag - c.imag;
+
+        return result;
+    }
+
     void display()
     {
         if (imag >= 0)
@@ -40,15 +50,17 @@ public:
 
 int main()
 {
-    Complex c1, c2, sum;
+    Complex c1, c2, addition, subtraction;
 
-    cout << "Enter first complex number:" << endl;
+    cout << "Enter First Complex Number:" << endl;
     c1.input();
 
-    cout << "\nEnter second complex number:" << endl;
+    cout << "\nEnter Second Complex Number:" << endl;
     c2.input();
 
-    sum = c1.add(c2);
+    addition = c1.add(c2);
+
+    subtraction = c1.subtract(c2);
 
     cout << "\nFirst Complex Number: ";
     c1.display();
@@ -56,8 +68,11 @@ int main()
     cout << "\nSecond Complex Number: ";
     c2.display();
 
-    cout << "\nSum of Complex Numbers: ";
-    sum.display();
+    cout << "\n\nAddition: ";
+    addition.display();
+
+    cout << "\nSubtraction: ";
+    subtraction.display();
 
     return 0;
 }
