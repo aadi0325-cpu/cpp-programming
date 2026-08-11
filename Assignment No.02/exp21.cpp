@@ -74,6 +74,4 @@ int main()
     cout << "\nSubtraction: ";
     subtraction.display();
 
-
-    return 0;
 }
