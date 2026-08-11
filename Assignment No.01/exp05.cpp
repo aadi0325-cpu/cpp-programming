@@ -6,10 +6,10 @@ using namespace std;
 int main() {
     double length, width, area, perimeter;
 
-    std::cout << "Enter the length of the rectangle: ";
+    std::cout << "Enter the length of the rectangle : ";
     std::cin >> length;
     
-    std::cout << "Enter the width of the rectangle: ";
+    std::cout << "Enter the width of the rectangle : ";
     std::cin >> width;
 
     area = length * width;
