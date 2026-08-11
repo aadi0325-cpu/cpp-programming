@@ -9,7 +9,7 @@ int main() {
     cout<< "Enter a number to calculate the table :";
     cin>> a;
 
-    for(int i=1; i<=10; i++){
-        cout<<a<<"*"<<i<<"="<<a*i<<"\n";
+    for(int i = 1; i <= 10; i++){
+        cout<< a << "*" << i << "=" << a * i <<"\n";
     }
 }
